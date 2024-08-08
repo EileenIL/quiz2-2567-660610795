@@ -1,5 +1,9 @@
+"use client";
 import Image from "next/image";
 import styles from "./page.module.css";
+import PostOwnner from "@/components/PostOwnner";
+import Reply from "@/components/Reply";
+import Comment from "@/components/Comment";
 
 export default function Home() {
   return (
@@ -13,54 +17,15 @@ export default function Home() {
         className="mx-auto p-3 rounded rounded-3 shadow-sm bg-white"
       >
         {/* Post Owner Example*/}
-        <div className="vstack gap-3">
-          <div className="d-flex align-items-center gap-3">
-            <img
-              src="/profileImages/handsome.jpg"
-              width="48"
-              height="48"
-              className="rounded-circle"
-              style={{ objectFit: "cover" }}
-            />
-            <span className="fw-semibold fs-5">Chayanin Suatap 650610560</span>
-          </div>
-
-          <span>Quiz ง่ายจังเลยครับ ขอยาก ๆ กว่านี้ได้ไหม #261207</span>
-
-          <div className="d-flex align-items-center gap-1">
-            <img src="/like.svg" width={20}></img>
-            <span className="text-muted">100 คน</span>
-          </div>
-          <hr className="m-0 border" />
-        </div>
-
+       <PostOwnner name="Sadanun Laksanaaree" studentId="660610795"/>
         {/* Comment Example */}
-        <div className="d-flex gap-2 my-2">
-          <img
-            src="/profileImages/lisa.jpg"
-            width="48"
-            height="48"
-            className="rounded-circle"
-            style={{ objectFit: "cover" }}
-          />
-          <div
-            className="rounded rounded-3 p-2"
-            style={{ backgroundColor: "#E5E7EB" }}
-          >
-            <span className="fw-semibold">Lisa</span>
-            <br />
-            <span>จริงค่า</span>
-            <div className="d-flex align-items-center gap-1">
-              <img src="/like.svg" width={20}></img>
-              <span className="text-muted">999 คน</span>
-            </div>
-          </div>
-        </div>
+       <Comment/>
 
         {/* Reply Example */}
-        <div className="d-flex gap-2 my-2 ps-5">
+      <Reply/>
+      <div className="d-flex gap-2 my-2">
           <img
-            src="/profileImages/puppy.jpg"
+            src= "/profileImages/charliebrown.jpg"
             width="48"
             height="48"
             className="rounded-circle"
@@ -70,16 +35,15 @@ export default function Home() {
             className="rounded rounded-3 p-2"
             style={{ backgroundColor: "#E5E7EB" }}
           >
-            <span className="fw-semibold">หมาน้อย</span>
+            <span className="fw-semibold">Charlie Brown</span>
             <br />
-            <span>จริงค้าบบบบบบบบ</span>
+            <span>บ้าไปแล้ว... หรือเปล่า?</span>
             <div className="d-flex align-items-center gap-1">
               <img src="/like.svg" width={20}></img>
-              <span className="text-muted">2 คน</span>
+              <span className="text-muted">0 คน</span>
             </div>
           </div>
         </div>
-
         {/* map-loop render Comment component here */}
       </div>
     </div>

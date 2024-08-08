@@ -1,5 +1,17 @@
 // You can define interfaces for all React components here.
 // Do not forget to export properly.
 
-interface ReplyProps {}
-export type { ReplyProps };
+interface ReplyProps {
+    ImagePath: string;
+    username: string;
+    replyTitle: string;
+    likes : number;
+}
+interface CommentProps{
+    ImagePath: string;
+    username: string;
+    commentTitle: string;
+    likes : number;
+    replies : string[];
+}
+export type { ReplyProps,CommentProps };
